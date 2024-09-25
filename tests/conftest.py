@@ -19,3 +19,12 @@ def strange_rect():
     yield strange_rectangle
     print("Tearing down fixture")
     del strange_rectangle        
+
+@pytest.fixture
+#Musi nazywać się tak samo jak nazwa zmiennej w tescie
+def weird_rectangle():
+    print("Setting up fixture")
+    rectangle = shapes.Rectangle(5, 20)
+    yield rectangle
+    print("Tearing down fixture")
+    del rectangle

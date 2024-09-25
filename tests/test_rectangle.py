@@ -8,4 +8,7 @@ def test_perimeter(my_rectangle):
 
 def test_strange_rectangle(strange_rect, my_rectangle):
 
-    assert (strange_rect == my_rectangle) == False
+    assert strange_rect != my_rectangle
+
+def test_not_equal(my_rectangle, weird_rectangle):
+    assert my_rectangle != weird_rectangle
